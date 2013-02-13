@@ -1,0 +1,11 @@
+# this script watches transmission, copies downloaded files to a new dir and removes completly seeded files.
+0,10,20,30,40,50 * * * * /var/lib/transmission-daemon/info/script.sh >> /home/user/postscript.out
+
+# this starts the flexget search
+@hourly /usr/local/bin/flexget --cron
+
+# this script starts transferring files to the home box
+2,12,22,32,42,52 * * * * /home/dahef34/.lftp/sync.pl > /home/dahef34/lftp.out
+
+# this script cycles the log file
+@weekly mv /root/.flexget/flexget.log /root/.flexget/flexget.log.old

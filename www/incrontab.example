@@ -1,0 +1,2 @@
+# this script watches this directory and copies it to a new directory so it can be transffered home
+/home/dahef34/downloads/complete IN_CREATE,IN_MOVED_TO,IN_ONLYDIR cp -r /home/dahef34/downloads/complete/$# /home/dahef34/complete/$#
