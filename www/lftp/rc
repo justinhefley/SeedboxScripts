@@ -1,0 +1,13 @@
+set ssl:verify-certificate no
+set ftp:ssl-force true
+set ftp:ssl-protect-data true
+set ftp:ssl-protect-list true
+set net:connection-limit 4
+set pget:default-n 6
+set mirror:use-pget-n 4
+set mirror:parallel-transfer-count 1
+set mirror:parallel-directories true
+
+lftp -d -u username,password username.dyndns.org
+mirror -R --Remove-source-files --exclude-glob *.r?? --verbose /path/to/TransferDirectory /path/to/ftp/directory --log=/path/to/store/transfer.log
+quit
