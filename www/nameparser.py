@@ -1,4 +1,4 @@
-#!/usr/bun/python
+#!/usr/bin/python
 import os
 import sys
 import re
